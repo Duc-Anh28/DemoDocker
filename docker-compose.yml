@@ -1,0 +1,18 @@
+version: '3.7'
+volumes:
+  pgdata_local: {}
+services:
+  mysql-spring-boot-compose:
+    image: mysql:8.0
+    container_name: mysql-spring-boot-compose
+    ports:
+      - 2000:3306
+    environment:
+      MYSQL_PASSWORD: admin123
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: test-database
+  java-spring-boot-compose:
+    image: anhnd2001/demo-doc-ker:v1
+    container_name: java-spring-boot-compose
+    ports:
+      - 3030:8080
