@@ -13,6 +13,5 @@ services:
       MYSQL_DATABASE: test-database
   java-spring-boot-compose:
     image: anhnd2001/demo-doc-ker:v1
-    container_name: java-spring-boot-compose
     ports:
       - 3030:8080
